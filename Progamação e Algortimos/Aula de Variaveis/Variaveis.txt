@@ -1,0 +1,19 @@
+Digite o valor de "A":
+a = num1
+
+Digite o valor de "B":
+b = num2
+
+Digite o valor de "C":
+c = num3
+
+Realize a operação de soma das variaveis e atribua o resultado a "D".
+soma = a+b+c
+
+Divida o valor "D" por 3 para calcuar a média.
+e = soma/3
+
+Imprima o valor resultante da média na variavel "E".
+e
+
+-----------------------------------------------------------------------------------------
