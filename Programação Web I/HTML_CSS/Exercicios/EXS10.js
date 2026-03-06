@@ -1,8 +1,8 @@
-const prompt = require('readline-sync');
+import { question } from 'readline-sync';
 
-let prova1 = Number(prompt.question("Digite a nota da prova 1:"));
-let prova2 = Number(prompt.question("Digite a nota da prova 2:"));
-let prova3 = Number(prompt.question("Digite a nota da prova 3:"));
+let prova1 = Number(question("Digite a nota da prova 1:"));
+let prova2 = Number(question("Digite a nota da prova 2:"));
+let prova3 = Number(question("Digite a nota da prova 3:"));
 
 let mediaFinal = ((prova1 * 2) + (prova2 * 3) + (prova3 * 5)) / (2 + 3 + 5);
 
