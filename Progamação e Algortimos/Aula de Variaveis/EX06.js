@@ -1,7 +1,7 @@
-import { question } from 'readline-sync';
+const prompt = require('readline-sync');
 
-let numero1 = Number(question("Digite o primeiro numero:"));
-let numero2 = Number(question("Digite o segundo numero:"));
+let numero1 = Number(prompt.question("Digite o primeiro numero:"));
+let numero2 = Number(prompt.question("Digite o segundo numero:"));
 
 // Calcule
 let soma = numero1 + numero2;
