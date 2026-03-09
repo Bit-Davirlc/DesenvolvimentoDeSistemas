@@ -1,0 +1,65 @@
+<!doctype html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1>Alunos</h1>
+    <table border="1">
+        <caption>
+          Tabela de Alunos
+        </caption>
+      <thead>
+        <tr>
+          <th>Nome</th>
+          <th>Idade</th>
+          <th>Curso</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Davi</td>
+          <td>28</td>
+          <td>Dev. Sistemas</td>
+        </tr>
+        <tr>
+          <td>Paloma</td>
+          <td>20</td>
+          <td>Dev. Sistemas</td>
+        </tr>
+        <tr>
+          <td>Daniel</td>
+          <td>20</td>
+          <td>Dev. Sistemas</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <hr />
+    <caption>
+      Registro dos Alunos
+    </caption>
+    <br /><br />
+    <form>
+      <label for="nome">Nome:</label>
+      <input type="text" id="nome" required />
+      <br /><br />
+      <label for="email">Email:</label>
+      <input type="email" id="email" required />
+      <br /><br />
+      <label for="idade">Idade:</label>
+      <input type="number" id="idade" required />
+      <br /><br />
+      <label for="curso">Curso:</label>
+      <select id="curso">
+        <option>Desenvolvimento de Sistemas</option>
+        <option>Administração</option>
+        <option>Eletroeletronica</option>
+      </select>
+      <br /><br />
+      <button type="submit">Inserir</button>
+    </form>
+  </body>
+</html>

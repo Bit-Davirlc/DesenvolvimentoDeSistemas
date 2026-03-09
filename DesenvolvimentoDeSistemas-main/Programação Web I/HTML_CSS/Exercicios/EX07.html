@@ -1,0 +1,22 @@
+<!-- Faça um algoritmo que leia as 3 notas de um aluno e calcule a média final deste aluno. Considerar que a média é ponderada e que o peso das notas é: 2,3 e 5, respectivamente.  -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Calculo de média final</h1>
+</body>
+<script>
+    let prova1 = prompt ("Digite a nota da prova 1:");
+    let prova2 = prompt ("Digite a nota da prova 2:");
+    let prova3 = prompt ("Digite a nota da prova 3:");
+
+    let mediaFinal = ((prova1 * 2) + (prova2 * 3) + (prova3 * 5)) / (2 + 3 + 5);
+
+    alert(`A média ponderada é: ${mediaFinal}`);
+</script>
+</html>
