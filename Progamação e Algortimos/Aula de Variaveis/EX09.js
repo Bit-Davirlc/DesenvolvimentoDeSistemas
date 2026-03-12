@@ -1,3 +1,5 @@
+//EX09: Criação de condições para avaliação de aluno com base em média
+
 const readline = require('readline');
 
 const rl = readline.createInterface({
@@ -13,14 +15,16 @@ rl.question("Digite a primeira nota: ", function(n1) {
 
     let media = (nota1 + nota2) / 2;
 
-    console.log("Média: " + media);
+    console.log("Média: " + media.toFixed(2));
 
-    if (media >= 6) {
-      console.log("Aluno aprovado");
-    } else if(media >= 3 && media <6){
-      console.log("Aluno em EXAME");
+    if (media == 10) {
+        console.log("MB");
+    } else if(media >= 7.5){
+        console.log("B");
+    } else if(media >= 5.0){
+        console.log("R");
     } else {
-      console.log("Aluno reprovado");
+        console.log("I")
     }
 
     rl.close();
