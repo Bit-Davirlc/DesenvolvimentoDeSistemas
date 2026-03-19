@@ -1,3 +1,4 @@
+//EX12: Definir a ordem do numero digitado.
 const prompt = require('readline-sync');
 
 let num = Number(prompt.question("Digite o numero:"));

@@ -1,3 +1,4 @@
+//EX02: Apresentar o nome que foi digitado.
 const prompt = require('readline-sync');
 
 let nome;

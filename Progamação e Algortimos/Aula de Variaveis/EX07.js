@@ -1,3 +1,4 @@
+//EX07: Definir o triangulo.
 const prompt = require('readline-sync');
 
 let lado1 = Number(prompt.question("Digite o lado A:"));

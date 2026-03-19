@@ -1,3 +1,4 @@
+//EX06: Realizar as operações matematica basica.
 const prompt = require('readline-sync');
 
 let numero1 = Number(prompt.question("Digite o primeiro numero:"));

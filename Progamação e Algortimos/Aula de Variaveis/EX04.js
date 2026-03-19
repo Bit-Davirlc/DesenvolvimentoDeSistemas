@@ -1,3 +1,4 @@
+//EX04: Calcular area de um retangulo.
 let largura = 5;
 let altura = 10;
 

@@ -1,3 +1,4 @@
+//EX05: Realizar o uso de codigo temporario para trocar valores entre variaveis.
 let valorA = 10;
 let valorB = 20;
 //Variavel temp é usada para armazenar temporariamente o valor de valorA durante a troca

@@ -1,3 +1,4 @@
+//EX01: Realizar a soma de dois valores e printar o resultado.
 let n1 = 10;
 let n2 = 5;
 let resultado = n1 + n2;

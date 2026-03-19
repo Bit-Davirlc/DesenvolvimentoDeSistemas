@@ -1,3 +1,4 @@
+//EX15: Definir qual o tipo de triangulo.
 const prompt = require('readline-sync');
 
 let lado1 = Number(prompt.question("Digite o lado A:"));

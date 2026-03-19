@@ -1,3 +1,4 @@
+//EX11: Definir se permitido ou negado a partir da idade digitada
 const prompt = require('readline-sync');
 
 let num = Number(prompt.question("Digite a idade:"));

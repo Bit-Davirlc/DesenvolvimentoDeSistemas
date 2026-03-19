@@ -1,3 +1,4 @@
+//EX03: Realiar a soma de varios valores.
 let valor1 = 10;
 let valor2 = 20;
 let valor3 = 30;

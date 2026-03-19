@@ -1,3 +1,4 @@
+//EX14: Calcular o valor da compra com e sem desconto.
 const prompt = require("readline-sync");
 
 let valueInput;
