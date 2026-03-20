@@ -1,3 +1,73 @@
-h1{
-    color: blue
+body {
+    font-family: Arial, sans-serif;
+    background-color: #0f172a; /* Azul marinho muito escuro */
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+}
+
+#caixa {
+    background-color: #1e293b; /* Cinza azulado profundo */
+    color: #f1f5f9; /* Branco levemente acinzentado */
+    padding: 25px;
+    border-radius: 10px;
+    width: 800px;
+    text-align: center;
+}
+
+form {
+    text-align: left;
+}
+
+caption {
+    padding-bottom: 25px;
+}
+
+h1 {
+    color: #38bdf8; /* Ciano brilhante */
+    text-align: center;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 20px;
+}
+
+th, td {
+    border: 1px solid #334155; /* Bordas suaves */
+    padding: 8px;
+    text-align: left;
+}
+
+th {
+    background-color: #334155;
+    color: #38bdf8; /* Títulos da tabela em ciano */
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+    color: #94a3b8; /* Cinza médio para labels */
+}
+
+input, select {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 15px;
+    box-sizing: border-box;
+    background-color: #0f172a;
+    border: 1px solid #334155;
+    color: white; /* Texto digitado em branco */
+}
+
+button {
+    background-color: #0ea5e9; /* Azul vibrante */
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    width: 100%;
+    font-weight: bold;
+    transition: background 0.3s;
 }
