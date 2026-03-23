@@ -1,52 +1,59 @@
 <!doctype html>
-<html lang="en">
+<html lang="pt-br">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="style.css" />
     <title>Jornal ETEC Albert Einstein</title>
   </head>
-  <header>NOTÍCIAS ETEC ALBERT EINSTEIN</header>
   <body>
-    <div class="news">
-      <div class="mainNews">
-        Noticia Principal
-        <img
-          src="https://upload.wikimedia.org/wikipedia/commons/4/45/A_small_cup_of_coffee.JPG"
-          alt="Imagem de Café"
-        />
-      </div>
-      <div class="otherNews">
-        Outras Noticias
-        <div class="miniNews">
+    <header>NOTÍCIAS ETEC ALBERT EINSTEIN</header>
+
+    <main class="news">
+      <section class="mainNews">
+        <h1>Notícia Principal</h1>
+        <div class="mainContent">
           <img
-            class="miniImg"
             src="https://upload.wikimedia.org/wikipedia/commons/4/45/A_small_cup_of_coffee.JPG"
-            alt="Imagem de Café"
+            alt="Notícia Principal"
           />
+          <p>Descrição da notícia principal do jornal da ETEC.</p>
         </div>
-        <div class="miniNews">
-          <img
-            class="miniImg"
-            src="https://upload.wikimedia.org/wikipedia/commons/4/45/A_small_cup_of_coffee.JPG"
-            alt="Imagem de Café"
-          />
+      </section>
+
+      <section class="otherNews">
+        <h2>Outras Notícias</h2>
+        <div class="newsGrid">
+          <div class="col">
+            <div class="miniNews">
+              <img
+                src="https://upload.wikimedia.org/wikipedia/commons/4/45/A_small_cup_of_coffee.JPG"
+                alt="Café"
+              />
+            </div>
+            <div class="miniNews">
+              <img
+                src="https://upload.wikimedia.org/wikipedia/commons/4/45/A_small_cup_of_coffee.JPG"
+                alt="Café"
+              />
+            </div>
+          </div>
+          <div class="col">
+            <div class="miniNews">
+              <img
+                src="https://upload.wikimedia.org/wikipedia/commons/4/45/A_small_cup_of_coffee.JPG"
+                alt="Café"
+              />
+            </div>
+            <div class="miniNews">
+              <img
+                src="https://upload.wikimedia.org/wikipedia/commons/4/45/A_small_cup_of_coffee.JPG"
+                alt="Café"
+              />
+            </div>
+          </div>
         </div>
-        <div class="miniNews">
-          <img
-            class="miniImg"
-            src="https://upload.wikimedia.org/wikipedia/commons/4/45/A_small_cup_of_coffee.JPG"
-            alt="Imagem de Café"
-          />
-        </div>
-        <div class="miniNews">
-          <img
-            class="miniImg"
-            src="https://upload.wikimedia.org/wikipedia/commons/4/45/A_small_cup_of_coffee.JPG"
-            alt="Imagem de Café"
-          />
-        </div>
-      </div>
-    </div>
+      </section>
+    </main>
   </body>
 </html>
