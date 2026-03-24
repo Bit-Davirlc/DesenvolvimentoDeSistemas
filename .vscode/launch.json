@@ -1,0 +1,11 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "type": "chrome",
+            "request": "launch",
+            "name": "Abrir EX01.html",
+            "file": "${workspaceFolder}/Programação Web I/HTML_CSS/Exercicios/EX01.html" 
+        }
+    ]
+}
