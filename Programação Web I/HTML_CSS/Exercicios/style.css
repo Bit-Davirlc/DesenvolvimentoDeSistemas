@@ -6,19 +6,19 @@
     --bg-gradient: linear-gradient(135deg, #e0f7fa 0%, #e8f5e9 50%, #fff9c4 100%);
     /* Define uma cor branca com 50% de transparência (efeito de vidro) */
     --bg-glass: rgba(255, 255, 255, 0.5);
-    
+
     /* Variáveis de cores para o texto, do mais escuro ao mais claro */
     --text-main: #222;
     --text-soft: #444;
     --text-muted: #555;
-    
+
     /* Definições de arredondamento de bordas (grande e pequeno) */
     --radius-lg: 10px;
     --radius-sm: 8px;
     /* Definições de sombras para dar profundidade aos elementos */
     --shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
     --shadow-soft: 0 2px 5px rgba(0, 0, 0, 0.1);
-    
+
     /* Cor de fundo preta semi-transparente para cobrir as fotos no hover */
     --overlay-bg: rgba(0, 0, 0, 0.8);
     /* Velocidade padrão de todas as animações do site (0.4 segundos) */
@@ -27,159 +27,244 @@
 
 /* O seletor '*' aplica regras a todos os elementos da página */
 * {
-    margin: 0;           /* Remove margens externas padrão */
-    padding: 0;          /* Remove preenchimentos internos padrão */
-    box-sizing: border-box; /* Garante que padding e bordas não aumentem o tamanho total do elemento */
+    margin: 0;
+    /* Remove margens externas padrão */
+    padding: 0;
+    /* Remove preenchimentos internos padrão */
+    box-sizing: border-box;
+    /* Garante que padding e bordas não aumentem o tamanho total do elemento */
 }
 
 body {
-    min-height: 100vh;   /* O corpo ocupa no mínimo a altura total da janela do navegador */
-    background: var(--bg-gradient); /* Aplica o gradiente definido no :root */
-    font-family: 'Segoe UI', Arial, sans-serif; /* Define a fonte do site */
-    color: var(--text-main); /* Aplica a cor de texto principal */
-    
-    display: flex;       /* Ativa o modo Flexbox no corpo */
-    flex-direction: column; /* Organiza os filhos (header, main, footer) um embaixo do outro */
+    min-height: 100vh;
+    /* O corpo ocupa no mínimo a altura total da janela do navegador */
+    background: var(--bg-gradient);
+    /* Aplica o gradiente definido no :root */
+    font-family: 'Segoe UI', Arial, sans-serif;
+    /* Define a fonte do site */
+    color: var(--text-main);
+    /* Aplica a cor de texto principal */
+
+    display: flex;
+    /* Ativa o modo Flexbox no corpo */
+    flex-direction: column;
+    /* Organiza os filhos (header, main, footer) um embaixo do outro */
 }
 
 header {
-    margin-bottom: 30px; /* Espaço entre o cabeçalho e as notícias */
-    padding: 20px 0;     /* Espaço interno em cima e embaixo do texto */
-    background-color: var(--bg-glass); /* Aplica o fundo semi-transparente */
-    backdrop-filter: blur(10px); /* Cria o efeito de desfoque no fundo (estilo vidro) */
-    border-bottom: 2px solid rgba(0, 0, 0, 0.1); /* Linha fina e sutil na parte inferior */
-    color: var(--text-soft); /* Cor do título do jornal */
-    text-align: center;  /* Centraliza o texto */
-    font-weight: 600;    /* Deixa a fonte levemente negritada */
-    font-size: 1.5rem;   /* Tamanho da fonte */
-    letter-spacing: 1px; /* Aumenta o espaço entre as letras */
+    margin-bottom: 30px;
+    /* Espaço entre o cabeçalho e as notícias */
+    padding: 20px 0;
+    /* Espaço interno em cima e embaixo do texto */
+    background-color: var(--bg-glass);
+    /* Aplica o fundo semi-transparente */
+    backdrop-filter: blur(10px);
+    /* Cria o efeito de desfoque no fundo (estilo vidro) */
+    border-bottom: 2px solid rgba(0, 0, 0, 0.1);
+    /* Linha fina e sutil na parte inferior */
+    color: var(--text-soft);
+    /* Cor do título do jornal */
+    text-align: center;
+    /* Centraliza o texto */
+    font-weight: 600;
+    /* Deixa a fonte levemente negritada */
+    font-size: 1.5rem;
+    /* Tamanho da fonte */
+    letter-spacing: 1px;
+    /* Aumenta o espaço entre as letras */
 }
 
 /* ==========================================================================
    3. LAYOUT (CONTAINER PRINCIPAL)
    ========================================================================== */
 .news {
-    display: flex;       /* Alinha a notícia principal e a coluna da direita lado a lado */
-    align-items: flex-start; /* Alinha o topo das duas colunas */
-    max-width: 1200px;   /* Define a largura máxima do site */
-    margin: 20px auto;   /* Centraliza o container na tela */
-    padding: 0 20px 40px; /* Espaçamento interno nas laterais e embaixo */
-    gap: 40px;           /* Espaço entre a notícia principal e as outras notícias */
-    
-    flex: 1;             /* Faz essa seção "crescer" para ocupar o espaço vazio, empurrando o footer para baixo */
+    display: flex;
+    /* Alinha a notícia principal e a coluna da direita lado a lado */
+    align-items: flex-start;
+    /* Alinha o topo das duas colunas */
+    max-width: 1200px;
+    /* Define a largura máxima do site */
+    margin: 20px auto;
+    /* Centraliza o container na tela */
+    padding: 0 20px 40px;
+    /* Espaçamento interno nas laterais e embaixo */
+    gap: 40px;
+    /* Espaço entre a notícia principal e as outras notícias */
+
+    flex: 1;
+    /* Faz essa seção "crescer" para ocupar o espaço vazio, empurrando o footer para baixo */
 }
 
 /* Proporção das colunas: a principal é um pouco maior (1.2) que a lateral (1) */
-.mainNews { flex: 1.2; }
-.otherNews { flex: 1; }
+.mainNews {
+    flex: 1.2;
+}
+
+.otherNews {
+    flex: 1;
+}
 
 .newsTitle {
-    min-height: 70px;    /* Reserva espaço para o título, alinhando as fotos mesmo se o texto variar */
-    display: flex;       /* Ativa flex para centralizar o texto internamente */
-    align-items: center; /* Centraliza o texto verticalmente dentro dos 70px */
+    min-height: 70px;
+    /* Reserva espaço para o título, alinhando as fotos mesmo se o texto variar */
+    display: flex;
+    /* Ativa flex para centralizar o texto internamente */
+    align-items: center;
+    /* Centraliza o texto verticalmente dentro dos 70px */
     margin-top: 0;
     margin-bottom: 20px;
     font-size: 1.3rem;
     color: var(--text-main);
-    border-left: 4px solid #4caf50; /* Barra verde decorativa ao lado do título */
-    padding-left: 15px;  /* Espaço entre a barra verde e o texto */
-    line-height: 1.2;    /* Altura da linha do texto */
+    border-left: 4px solid #4caf50;
+    /* Barra verde decorativa ao lado do título */
+    padding-left: 15px;
+    /* Espaço entre a barra verde e o texto */
+    line-height: 1.2;
+    /* Altura da linha do texto */
 }
 
 /* ==========================================================================
    4. NOTÍCIA PRINCIPAL
    ========================================================================== */
+.mainNews {
+    position: relative;
+    /* Permite que o overlay se posicione em relação a este container */
+    width: 100%;
+    /* Altura ajustada para caber duas fotos ao lado da principal */
+    border-radius: var(--radius-sm);
+    /* Arredondamento menor */
+    overflow: hidden;
+    /* Esconde qualquer conteúdo (como o zoom da imagem) que saia das bordas */
+    box-shadow: var(--shadow-soft);
+    cursor: pointer;
+    /* Muda o mouse para a "mãozinha" de link */
+}
+
 .mainNews img {
-    width: 100%;         /* A imagem ocupa toda a largura da coluna dela */
-    height: 350px;       /* Altura fixa para manter o padrão visual */
-    object-fit: cover;   /* Corta a imagem para preencher o espaço sem distorcer */
-    border-radius: var(--radius-lg); /* Aplica arredondamento de 10px */
-    box-shadow: var(--shadow); /* Aplica a sombra definida nas variáveis */
+    width: 100%;
+    /* A imagem ocupa toda a largura da coluna dela */
+    height: 350px;
+    /* Altura fixa para manter o padrão visual */
+    object-fit: cover;
+    /* Corta a imagem para preencher o espaço sem distorcer */
+    border-radius: var(--radius-lg);
+    /* Aplica arredondamento de 10px */
+    box-shadow: var(--shadow);
+    /* Aplica a sombra definida nas variáveis */
 }
 
 .mainNews p {
-    margin-top: 15px;    /* Espaço entre a foto e o texto */
+    margin-top: 15px;
+    /* Espaço entre a foto e o texto */
     font-size: 1rem;
-    line-height: 1.6;    /* Espaçamento entre as linhas para facilitar a leitura */
-    color: var(--text-muted); /* Cor de texto mais suave */
+    line-height: 1.6;
+    /* Espaçamento entre as linhas para facilitar a leitura */
+    color: var(--text-muted);
+    /* Cor de texto mais suave */
 }
 
 /* ==========================================================================
    5. GRID DE MINI NOTÍCIAS (DIREITA)
    ========================================================================== */
 .newsGrid {
-    display: flex;       /* Coloca as duas sub-colunas lado a lado */
-    gap: 15px;           /* Espaço entre as mini notícias */
+    display: flex;
+    /* Coloca as duas sub-colunas lado a lado */
+    gap: 15px;
+    /* Espaço entre as mini notícias */
 }
 
 .col {
     display: flex;
-    flex-direction: column; /* Coloca uma mini notícia sobre a outra */
+    flex-direction: column;
+    /* Coloca uma mini notícia sobre a outra */
     flex: 1;
     gap: 15px;
 }
 
 .miniNews {
-    position: relative;  /* Permite que o overlay se posicione em relação a este container */
+    position: relative;
+    /* Permite que o overlay se posicione em relação a este container */
     width: 100%;
-    height: 167px;       /* Altura ajustada para caber duas fotos ao lado da principal */
-    border-radius: var(--radius-sm); /* Arredondamento menor */
-    overflow: hidden;    /* Esconde qualquer conteúdo (como o zoom da imagem) que saia das bordas */
+    height: 167px;
+    /* Altura ajustada para caber duas fotos ao lado da principal */
+    border-radius: var(--radius-sm);
+    /* Arredondamento menor */
+    overflow: hidden;
+    /* Esconde qualquer conteúdo (como o zoom da imagem) que saia das bordas */
     box-shadow: var(--shadow-soft);
-    cursor: pointer;     /* Muda o mouse para a "mãozinha" de link */
+    cursor: pointer;
+    /* Muda o mouse para a "mãozinha" de link */
 }
 
 .miniNews img {
     width: 100%;
     height: 100%;
     object-fit: cover;
-    transition: transform var(--transition-speed) ease; /* Suaviza o efeito de zoom */
+    transition: transform var(--transition-speed) ease;
+    /* Suaviza o efeito de zoom */
 }
 
 .miniNews .overlay {
-    position: absolute;  /* Posiciona a camada exatamente sobre a imagem */
-    top: 0; left: 0;
-    width: 100%; height: 100%;
-    background: var(--overlay-bg); /* Fundo preto transparente */
+    position: absolute;
+    /* Posiciona a camada exatamente sobre a imagem */
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: var(--overlay-bg);
+    /* Fundo preto transparente */
     display: flex;
-    align-items: center; /* Centraliza o título verticalmente no hover */
-    justify-content: center; /* Centraliza o título horizontalmente no hover */
+    align-items: center;
+    /* Centraliza o título verticalmente no hover */
+    justify-content: center;
+    /* Centraliza o título horizontalmente no hover */
     padding: 15px;
-    opacity: 0;          /* Começa invisível */
-    transition: opacity var(--transition-speed) ease; /* Suaviza o aparecimento */
+    opacity: 0;
+    /* Começa invisível */
+    transition: opacity var(--transition-speed) ease;
+    /* Suaviza o aparecimento */
 }
 
 .miniNews h3 {
-    color: #ffffff;      /* Título branco para contrastar com o fundo preto do overlay */
+    color: #ffffff;
+    /* Título branco para contrastar com o fundo preto do overlay */
     font-size: 0.85rem;
     text-align: center;
     margin: 0;
-    transform: translateY(15px); /* Começa um pouco abaixo da posição original */
-    transition: transform var(--transition-speed) ease; /* Suaviza a subida do texto */
+    transform: translateY(15px);
+    /* Começa um pouco abaixo da posição original */
+    transition: transform var(--transition-speed) ease;
+    /* Suaviza a subida do texto */
 }
 
 /* --- ESTADOS DE HOVER (Passar o mouse) --- */
 .miniNews:hover img {
-    transform: scale(1.1); /* Aumenta a imagem em 10% (zoom) */
+    transform: scale(1.1);
+    /* Aumenta a imagem em 10% (zoom) */
 }
 
 .miniNews:hover .overlay {
-    opacity: 1;          /* Torna a camada preta visível */
+    opacity: 1;
+    /* Torna a camada preta visível */
 }
 
 .miniNews:hover h3 {
-    transform: translateY(0); /* Faz o texto subir para a posição correta */
+    transform: translateY(0);
+    /* Faz o texto subir para a posição correta */
 }
 
 /* ==========================================================================
    6. RODAPÉ (FOOTER)
    ========================================================================== */
 .footer {
-    margin-top: 50px;    /* Espaço entre o fim das notícias e o rodapé */
+    margin-top: 50px;
+    /* Espaço entre o fim das notícias e o rodapé */
     padding: 30px 0;
-    background-color: var(--bg-glass); /* Estilo de vidro igual ao header */
+    background-color: var(--bg-glass);
+    /* Estilo de vidro igual ao header */
     backdrop-filter: blur(10px);
-    border-top: 2px solid rgba(0, 0, 0, 0.1); /* Linha sutil no topo do footer */
+    border-top: 2px solid rgba(0, 0, 0, 0.1);
+    /* Linha sutil no topo do footer */
     text-align: center;
 }
 
@@ -187,7 +272,8 @@ header {
     max-width: 1200px;
     margin: 0 auto;
     display: flex;
-    flex-direction: column; /* Texto em cima, ícones embaixo */
+    flex-direction: column;
+    /* Texto em cima, ícones embaixo */
     gap: 15px;
 }
 
@@ -198,26 +284,37 @@ header {
 
 .social-links {
     display: flex;
-    justify-content: center; /* Centraliza os links sociais */
-    gap: 20px;           /* Espaço entre cada link social */
-    flex-wrap: wrap;     /* Permite que os links quebrem de linha em telas pequenas */
+    justify-content: center;
+    /* Centraliza os links sociais */
+    gap: 20px;
+    /* Espaço entre cada link social */
+    flex-wrap: wrap;
+    /* Permite que os links quebrem de linha em telas pequenas */
 }
 
 .social-icon {
-    text-decoration: none; /* Remove o sublinhado padrão de links */
+    text-decoration: none;
+    /* Remove o sublinhado padrão de links */
     color: var(--text-main);
     font-size: 0.9rem;
     font-weight: 500;
     padding: 8px 15px;
     border-radius: var(--radius-sm);
-    background: rgba(255, 255, 255, 0.3); /* Fundo branco bem suave nos botões */
-    transition: all 0.3s ease; /* Suaviza todas as mudanças (cor, posição) */
-    border: 1px solid rgba(0, 0, 0, 0.05); /* Borda quase invisível */
+    background: rgba(255, 255, 255, 0.3);
+    /* Fundo branco bem suave nos botões */
+    transition: all 0.3s ease;
+    /* Suaviza todas as mudanças (cor, posição) */
+    border: 1px solid rgba(0, 0, 0, 0.05);
+    /* Borda quase invisível */
 }
 
 .social-icon:hover {
-    background: #4caf50; /* Muda para verde ao passar o mouse */
-    color: white;        /* Muda o texto para branco */
-    transform: translateY(-3px); /* Faz o botão "subir" levemente */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra mais forte no hover */
+    background: #4caf50;
+    /* Muda para verde ao passar o mouse */
+    color: white;
+    /* Muda o texto para branco */
+    transform: translateY(-3px);
+    /* Faz o botão "subir" levemente */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    /* Sombra mais forte no hover */
 }
