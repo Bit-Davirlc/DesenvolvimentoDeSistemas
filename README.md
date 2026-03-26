@@ -21,7 +21,7 @@ Aqui você encontrará desde exercícios básicos até projetos mais estruturado
 
 <p align="center">
   <img height="160em" src="https://github-readme-stats.vercel.app/api?username=Bit-Davirlc&show_icons=true&theme=tokyonight"/>
-  <img height="160em" src="https://github-readme-stats.vercel.app/api/top-langs/?username=Bit-Davirlc&layout=compact&theme=tokyonight"/>
+  <img height="160em" src="https://github-readme-stats.vercel.app/api/top-langs/?username=Bit-Davirlc&layout=compact&theme=tokyonight&langs_count=6"/>
 </p>
 
 ---
@@ -29,7 +29,7 @@ Aqui você encontrará desde exercícios básicos até projetos mais estruturado
 ## 🛠️ Tecnologias e Ferramentas
 
 <p align="center">
-  <img src="https://skillicons.dev/icons?i=java,js,cs,html,css,mysql,git,github,vscode"/>
+  <img src="https://skillicons.dev/icons?i=java,js,html,css,mysql,git,github,vscode"/>
 </p>
 
 ---
