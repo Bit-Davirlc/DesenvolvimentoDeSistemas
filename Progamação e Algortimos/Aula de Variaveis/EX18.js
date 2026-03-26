@@ -4,25 +4,20 @@ const prompt = require("readline-sync");
 console.log("---MENU DO VERIFICA RODIZIO---");
 const option = prompt.question("QUAL FINAL DA PLACA:");
 
-switch (parseInt(option)) {
-  case 1:
-  case 2:
+switch (true) {
+  case (option === "1" || option === "2"):
     console.log("Segunda-feira");
     break;
-  case 3:
-  case 4:
+  case (option === "3" || option === "4"):
     console.log("Terça-feira");
     break;
-  case 5:
-  case 6:
+  case (option === "5" || option === "6"):
     console.log("Quarta-feira");
     break;
-  case 7:
-  case 8:
+  case (option === "7" || option === "8"):
     console.log("Quinta-feira");
     break;
-  case 9:
-  case 0:
+  case (option === "9" || option === "0"):
     console.log("Sexta-feira");
     break;
   default:
