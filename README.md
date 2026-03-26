@@ -20,8 +20,12 @@ Aqui você encontrará desde exercícios básicos até projetos mais estruturado
 ## 📊 Estatísticas do GitHub
 
 <p align="center">
-  <img height="160em" src="https://github-readme-stats.vercel.app/api?username=Bit-Davirlc&show_icons=true&theme=tokyonight"/>
+  <img height="160em" src="https://github-profile-summary-cards.vercel.app/api/cards/stats?username=Bit-Davirlc&theme=tokyonight"/>
   <img height="160em" src="https://github-profile-summary-cards.vercel.app/api/cards/repos-per-language?username=Bit-Davirlc&theme=tokyonight"/>
+</p>
+
+<p align="center">
+  <img src="https://streak-stats.demolab.com?user=Bit-Davirlc&theme=tokyonight"/>
 </p>
 
 ---
@@ -38,11 +42,8 @@ Aqui você encontrará desde exercícios básicos até projetos mais estruturado
 
 ```bash
 📁 DesenvolvimentoDeSistemas
- ┣ 📁 logica-programacao
- ┣ 📁 banco-de-dados
- ┣ 📁 front-end
- ┣ 📁 back-end
- ┣ 📁 projetos
+ ┣ 📁 Programacao e Algortimos
+ ┣ 📁 Programação Web I/HTML_CSS/Exercicios
  ┗ README.md
 ```
 
