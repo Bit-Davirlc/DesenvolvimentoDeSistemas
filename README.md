@@ -21,7 +21,7 @@ Aqui você encontrará desde exercícios básicos até projetos mais estruturado
 
 <p align="center">
   <img height="160em" src="https://github-readme-stats.vercel.app/api?username=Bit-Davirlc&show_icons=true&theme=tokyonight"/>
-  <img height="160em" src="https://github-readme-stats.vercel.app/api/top-langs/?username=Bit-Davirlc&layout=compact&theme=tokyonight&langs_count=6"/>
+  <img height="160em" src="https://github-profile-summary-cards.vercel.app/api/cards/repos-per-language?username=Bit-Davirlc&theme=tokyonight"/>
 </p>
 
 ---
