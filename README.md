@@ -13,8 +13,6 @@
 
 Este repositório foi criado com o objetivo de armazenar e organizar todas as atividades, projetos e práticas realizadas durante o curso técnico em **Desenvolvimento de Sistemas**.
 
-Aqui você encontrará desde exercícios básicos até projetos mais estruturados, refletindo minha evolução como desenvolvedor.
-
 ---
 
 ## 📊 Estatísticas do GitHub
