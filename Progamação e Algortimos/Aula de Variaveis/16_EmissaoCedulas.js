@@ -1,6 +1,8 @@
 //EX16: Inserir um valor inicial e fazer a emissão de cedulas que serão emitidas no print. (Usando forEach)
 const prompt = require('readline-sync');
 
+//O uso do array foi de opção pessoal. 
+
 let balance = parseInt(prompt.question("Digite a quantia de dinheiro:"), 10);
 let half;
 const notes = [50, 20, 10, 5, 2, 1]
