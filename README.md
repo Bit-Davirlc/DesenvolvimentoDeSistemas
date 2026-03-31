@@ -40,6 +40,7 @@ Este repositório foi criado com o objetivo de armazenar e organizar todas as at
 
 ```bash
 📁 DesenvolvimentoDeSistemas
+ ┣ 📁 Banco de Dados
  ┣ 📁 Programacao e Algortimos
  ┣ 📁 Programação Web I/HTML_CSS/Exercicios
  ┗ README.md
