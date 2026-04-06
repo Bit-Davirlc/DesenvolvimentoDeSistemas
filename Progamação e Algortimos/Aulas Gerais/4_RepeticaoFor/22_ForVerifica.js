@@ -6,7 +6,7 @@ let numPositivo = 0;
 
 for (let i = 0; i < 10; i++) {
   let valorNum = Number(
-    prompt.question("Digite o número a ser avaliado:"),
+    prompt.question("Digite o numero a ser avaliado:"),
   );
 
   if(valorNum < 0){
