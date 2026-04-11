@@ -1,89 +1,100 @@
-<!doctype html>
-<html lang="pt-br">
-
+<!DOCTYPE html>
+<html lang="pt-BR">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <link rel="stylesheet" href="style.css" />
   <title>Jornal ETEC Albert Einstein</title>
+  <link rel="stylesheet" href="style.css" />
 </head>
 
 <body>
-  <header><h1>NOTÍCIAS ETEC ALBERT EINSTEIN</h1>
-  <nav><ul><li>home</li><li>sobre</li></ul></nav>
+  <header class="header">
+    <div class="header__container">
+      <h1 class="logo">Notícias ETEC Albert Einstein</h1>
+    </div>
   </header>
 
-  <main class="news">
-    <section class="mainNews">
-      <h2 class="newsTitle">Inovação: Alunos da Albert Einstein vencem Maratona de Programação</h2>
-      <div class="mainContent">
-        <a>
-          <img src="https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?auto=format&fit=crop&w=800&q=80"
-            alt="Alunos comemorando com laptops" />
-          <p>O grupo do curso de Desenvolvimento de Sistemas conquistou o primeiro lugar regional com um aplicativo
-            focado
-            em acessibilidade urbana. O projeto utiliza IA para mapear calçadas acessíveis em tempo real.</p>
-        </a>
+  <main class="container">
+    <section class="main-news">
+      <h2 class="section-title">Destaques da Semana</h2>
+      <div class="carousel">
+        <input type="radio" name="slider" id="slide-1" checked />
+        <input type="radio" name="slider" id="slide-2" />
+        <input type="radio" name="slider" id="slide-3" />
+
+        <div class="slides-container">
+          <div class="slides-wrapper">
+            <article class="card card--featured">
+              <img src="https://cdn.liberal.com.br/media/9c/11/0f/72765/etec-de-nova-odessa-vence-mostra-de-ciencia-e-tecnologia-do-instituto-3m-20251031180015000.jpg" alt="Maratona" class="card__image" />
+              <div class="card__overlay">
+                <div class="card__content">
+                  <h3 class="card__headline">Etec de Nova Odessa vence mostra de ciência e tecnologia do Instituto 3M</h3>
+                  <p class="card__excerpt">Projeto de educação gamificada desenvolvido por alunos foi 1º lugar em Ciências Humanas; unidade de Americana também foi premiada.</p>
+                </div>
+              </div>
+            </article>
+            <article class="card card--featured">
+              <img src="https://images.unsplash.com/photo-1503676260728-1c00da094a0b?auto=format&fit=crop&w=800&q=80" alt="Metodologia" class="card__image" />
+              <div class="card__overlay">
+                <div class="card__content">
+                  <h3 class="card__headline">Nova Metodologia de Ensino</h3>
+                  <p class="card__excerpt">Engajamento dos alunos cresce significativamente.</p>
+                </div>
+              </div>
+            </article>
+            <article class="card card--featured">
+              <img src="https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?auto=format&fit=crop&w=800&q=80" alt="Tecnologia" class="card__image" />
+              <div class="card__overlay">
+                <div class="card__content">
+                  <h3 class="card__headline">Semana de Tecnologia 2026</h3>
+                  <p class="card__excerpt">Confira a programação de workshops.</p>
+                </div>
+              </div>
+            </article>
+          </div>
+        </div>
+
+        <div class="carousel-nav">
+          <label for="slide-1" class="nav-dot"></label>
+          <label for="slide-2" class="nav-dot"></label>
+          <label for="slide-3" class="nav-dot"></label>
+        </div>
       </div>
     </section>
 
-    <section class="otherNews">
-      <h2 class="newsTitle">Outras Notícias</h2>
-      <div class="newsGrid">
-        <div class="col">
-          <div class="miniNews">
-            <a>
-              <img src="https://images.unsplash.com/photo-1523240795612-9a054b0db644?auto=format&fit=crop&w=400&q=80"
-                alt="Estudantes na biblioteca" />
-              <div class="overlay">
-                <h3>Inscrições abertas para o Vestibulinho 2026</h3>
-              </div>
-            </a>
-          </div>
-          <div class="miniNews">
-            <a>
-              <img src="https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?auto=format&fit=crop&w=400&q=80"
-                alt="Laboratório de eletrônica" />
-              <div class="overlay">
-                <h3>Semana de Tecnologia: Confira o cronograma de palestras</h3>
-              </div>
-            </a>
-          </div>
-        </div>
-        <div class="col">
-          <div class="miniNews">
-            <a>
-              <img src="https://images.unsplash.com/photo-1532094349884-543bc11b234d?auto=format&fit=crop&w=400&q=80"
-                alt="Experimento científico" />
-              <div class="overlay">
-                <h3>Laboratório de Química recebe novos equipamentos de última geração</h3>
-              </div>
-            </a>
-          </div>
-          <div class="miniNews">
-            <a>
-              <img src="https://images.unsplash.com/photo-1529070538774-1843cb3265df?auto=format&fit=crop&w=400&q=80"
-                alt="Reunião de alunos" />
-              <div class="overlay">
-                <h3>Grêmio Estudantil organiza torneio de E-sports para o próximo mês</h3>
-              </div>
-            </a>
-          </div>
-        </div>
+    <section class="other-news">
+      <h2 class="section-title">Últimas Notícias</h2>
+      <div class="news-grid">
+        <article class="card card--standard">
+          <a href="#" class="card__link">
+            <img src="https://images.unsplash.com/photo-1523240795612-9a054b0db644?auto=format&fit=crop&w=400&q=80" class="card__image" alt="Vestibulinho" />
+            <div class="card__overlay"><h3 class="card__title">Vestibulinho 2026</h3></div>
+          </a>
+        </article>
+        <article class="card card--standard">
+          <a href="#" class="card__link">
+            <img src="https://images.unsplash.com/photo-1532094349884-543bc11b234d?auto=format&fit=crop&w=400&q=80" class="card__image" alt="Laboratório" />
+            <div class="card__overlay"><h3 class="card__title">Novos Equipamentos</h3></div>
+          </a>
+        </article>
+        <article class="card card--standard">
+          <a href="#" class="card__link">
+            <img src="https://arenatribe.co.uk/wp-content/uploads/2025/12/Whisk_3df3ab29b15b23c86fe441c8f2b703afdr.jpeg" class="card__image" alt="E-sports" />
+            <div class="card__overlay"><h3 class="card__title">Torneio E-sports</h3></div>
+          </a>
+        </article>
+        <article class="card card--standard">
+          <a href="#" class="card__link">
+            <img src="https://images.unsplash.com/photo-1517694712202-14dd9538aa97?auto=format&fit=crop&w=400&q=80" class="card__image" alt="Programação" />
+            <div class="card__overlay"><h3 class="card__title">Curso de Python</h3></div>
+          </a>
+        </article>
       </div>
     </section>
   </main>
+
   <footer class="footer">
-    <div class="footer-content">
-      <p>Desenvolvido por <strong>Davi Robson Latini de Carvalho</strong></p>
-      <div class="social-links">
-        <a href="https://instagram.com/seuusuario" target="_blank" class="social-icon">Instagram</a>
-        <a href="https://facebook.com/seuusuario" target="_blank" class="social-icon">Facebook</a>
-        <a href="https://github.com/seuusuario" target="_blank" class="social-icon">GitHub</a>
-        <a href="https://linkedin.com/in/seuusuario" target="_blank" class="social-icon">LinkedIn</a>
-      </div>
-    </div>
+    <p>Desenvolvido por <strong>Davi Robson Latini de Carvalho</strong></p>
   </footer>
 </body>
-
 </html>
