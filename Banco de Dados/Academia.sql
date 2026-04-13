@@ -68,3 +68,5 @@ VALUES (2, 2);
 UPDATE ALUNOS
 SET NOME = 'Davi Carvalho'
 WHERE ID_ALUNO = 2;
+
+-- Teste Brench
