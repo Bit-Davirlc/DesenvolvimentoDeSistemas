@@ -91,10 +91,42 @@ VALUES
 (1, 2, 2,'2026-04-15', '16:00:00', 'AGENDADO'),
 (2, 1, 3,'2026-04-15', '12:30:00', 'CANCELADO');
 
-Select * from AGENDA;
+-- COMANDO PARA DELETAR UMA TABELA
+DROP TABELA AQUI;
 
+-- SELECT ALL FROM AGENDA
+SELECT * FROM AGENDA;
+SELECT * FROM BARBEIRO;
+SELECT * FROM CLIENTE;
+SELECT * FROM SERVICO;
+
+--JOIN DAS INFORMAÇÕES DA AGENDA COMO O NOME DO CLIENTE, NOME DO BARBEIRO, NOME DO SERVICO
 SELECT C.NOME, B.NOME, S.NOME_SERVICO
 FROM AGENDA A
 JOIN CLIENTE C ON A.ID_CLIENTE = C.ID_CLIENTE
 JOIN BARBEIRO B ON A.ID_BARBEIRO = B.ID_BARBEIRO
 JOIN SERVICO S ON A.ID_SERVICO = S.ID_SERVICO_AGENDA
+
+-- UPDATE DE INFORMAÇÃO DO CLIENTE NA AGENDA
+UPDATE AGENDA SET SITUACAO = 'CANCELADO' WHERE ID_AGENDA = 1;
+
+-- DELEÇÃO DE INFORMAÇÃO NA TABELA
+DELETE FROM AGENDA WHERE ID_AGENDA = 1; 
+
+-- DESCRIBE DAS TABELAS
+DESCRIBE AGENDA;
+DESCRIBE CLIENTE;
+DESCRIBE BARBEIRO;
+DESCRIBE SERVICO;
+
+-- 1. O que acontece se você executar o comando UPDATE sem utilizar a cláusula 
+-- WHERE? 
+-- R: Podera ocorrer a deleção de todas as informações daquela tabela.
+
+
+-- 2. Qual a importância de utilizar Chaves Estrangeiras (FK) em um banco de 
+-- dados relacional? 
+-- R: Sem as FK as tabelas não conseguem interegir entre si, o que impede que possamos criar laços entre elas e fazendo assim uma tabela como a de AGENDA
+
+-- 3. Para que serve o comando JOIN neste cenário da barbearia?
+-- R: O comando JOIN serve para realizar uma consulta de informações "Entrelaçadas" para facil visualização dos dados requisitados no codigo, assim, ao invés de apenas aparecer ID's, aparecera os nomes, como visto no JOIN da tabela AGENDA
