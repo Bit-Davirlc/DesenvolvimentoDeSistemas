@@ -13,14 +13,15 @@ CREATE TABLE CLIENTE(
     -- ENDERECO
     ENDERECO VARCHAR(2),
     NUMERO VARCHAR(10),
-    TIPO_RESIDENCIA(10),
+    TIPO_RESIDENCIA(20),
     CEP VARCHAR(10)
 );
 
 CREATE TABLE SERVICO(
-    ID_SERVICO INT AUTO_INCREMENT PRIMARY KEY,
+    ID_SERVICO_AGENDA INT AUTO_INCREMENT PRIMARY KEY,
     -- PRINCIPAL
-    NOME_SERVICO VARCHAR(100)
+    NOME_SERVICO VARCHAR(100),
+    CUSTO VARCHAR(20)
 );
 
 CREATE TABLE BARBEIRO(
@@ -42,8 +43,48 @@ CREATE TABLE AGENDA(
     DATA_AGENDA DATE,
     HORA_AGENDA TIME,
     SITUACAO VARCHAR(20),
+    -- SERVIÇO
+    ID_SERVICO INT,
     -- REFERENCIAS
     FOREIGN KEY (ID_BARBEIRO) REFERENCES BARBEIRO(ID_BARBEIRO),
     FOREIGN KEY (ID_CLIENTE) REFERENCES CLIENTE(ID_CLIENTE)
+    FOREIGN KEY (ID_SERVICO) REFERENCES SERVICO(ID_SERVICO_AGENDA)
 );
 
+INSERT INTO ESPECIALIDADES (NOME_SERVICO, CUSTO) VALUES
+('Cabelo', '70,00'),
+('Barba', '35,00'),
+('Pintura', '100,00'),
+('Cabelo + Barba', '100,00'),
+('Completo', '180,00');
+
+INSERT INTO MEDICOS (NOME, CPF, TELEFONE, EMAIL) VALUES
+('Carlos Silva', '123.456.789-00', '11999990001', 'carlos@barbearia.com'),
+('Ariel Souza', '987.654.321-00', '11999990002', 'ariel@barbearia.com'),
+('Marcos Lima', '111.222.333-44', '11999990003', 'marcos@barbearia.com'),
+('Felipe Alves', '555.666.777-88', '11999990004', 'felipe@barbearia.com'),
+('Gustavo Rocha', '999.888.777-66', '11999990005', 'gustavo@barbearia.com');
+
+INSERT INTO CLIENTE 
+(NOME, CPF, GENERO, TELEFONE, EMAIL, ENDERECO, NUMERO, TIPO_RESIDENCIA, CEP)
+VALUES
+('João Pereira', '222.333.444-55', 'M', '11988880001', 'joao@email.com', 'Rua A', '123', 'Casa', '09000000'),
+
+('Matheus Oliveira', '333.444.555-66', 'F', '11988880002', 'matheus@email.com', 'Rua B', '456', 'Apartamento', '09700000'),
+
+('Pedro Santos', '444.555.666-77', 'M', '11988880003', 'pedro@email.com', 'Rua C', '789', 'Casa', '01000000'),
+
+('Nathan Costa', '555.666.777-11', 'F', '11988880004', 'nathan.costa@email.com', 'Rua D', '321', 'Casa', '09900000'),
+
+('Lucas Martins', '666.777.888-22', 'M', '11988880005', 'lucas@email.com', 'Rua E', '654', 'Apartamento', '09300000');
+
+INSERT INTO AGENDA 
+(ID_CLIENTE, ID_BARBEIRO, DATA_AGENDA, HORA_AGENDA, SITUACAO)
+VALUES
+(1, 1, '2026-04-12', '09:00:00', 'FALTOU'),
+(2, 2, '2026-04-12', '10:00:00', 'REALIZADO'),
+(3, 3, '2026-04-13', '11:00:00', 'REALIZADO'),
+(4, 4, '2026-04-14', '14:00:00', 'AGENDADO'),
+(5, 5, '2026-04-14', '15:00:00', 'CANCELADO'),
+(1, 2, '2026-04-15', '16:00:00', 'AGENDADO'),
+(2, 1, '2026-04-15', '12:30:00', 'CANCELADO');
