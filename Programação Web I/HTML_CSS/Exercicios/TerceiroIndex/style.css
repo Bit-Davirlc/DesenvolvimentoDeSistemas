@@ -1,0 +1,319 @@
+:root {
+  --primary: #2563eb;
+  --accent: #22c55e;
+  --bg-gradient: linear-gradient(135deg, #f8fafc 0%, #eef2f7 100%);
+  --bg-glass: rgba(255, 255, 255, 0.85);
+  --text-main: #0f172a;
+  --text-secondary: #475569;
+  --text-light: #ffffff;
+  --border-color: rgba(0, 0, 0, 0.08);
+  --radius-lg: 12px;
+  --shadow-md: 0 6px 18px rgba(0, 0, 0, 0.08);
+  --transition: all 0.3s ease;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  min-height: 100vh;
+  font-family: "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  background: var(--bg-gradient);
+  background-attachment: fixed;
+  display: flex;
+  flex-direction: column;
+  color: var(--text-main);
+}
+
+/* --- HEADER REESTRUTURADO --- */
+.header {
+  display: flex;
+  flex-direction: column; /* Empilha Logo e Nav */
+  align-items: center;
+  background: var(--bg-glass);
+  backdrop-filter: blur(12px);
+  padding: 1.5rem 1rem 0.5rem 1rem;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  border-bottom: 1px solid var(--border-color);
+}
+
+.logo {
+  color: var(--primary);
+  justify-self: center;
+  font-size: 1.8rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: -1px;
+  margin-bottom: 0.5rem;
+}
+
+/* A Barra Longa e Fina */
+nav {
+  width: 100%;
+  max-width: 1200px;
+  border-top: 1px solid var(--border-color); /* Linha superior */
+  padding: 0.5rem 0;
+  display: flex;
+  justify-content: left;
+}
+
+nav p {
+  font-size: 0.85rem;
+  color: var(--text-secondary);
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+/* Botão Assine */
+.header .login {
+  position: absolute;
+  right: 2rem;
+  top: 1.5rem; /* Ajustado para alinhar com o logo */
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  background: var(--primary);
+  color: var(--text-light);
+  font-size: 0.9rem;
+  font-weight: 600;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 50px; /* Estilo pill */
+  cursor: pointer;
+  transition: var(--transition);
+  box-shadow: 0 4px 12px rgba(37, 99, 235, 0.2);
+}
+
+.login:hover {
+  background: #1d4ed8;
+  transform: translateY(-2px);
+}
+
+.login img {
+  width: 16px;
+  height: 16px;
+}
+
+/* --- CONTEÚDO --- */
+.container {
+  max-width: 1200px;
+  margin: 2rem auto;
+  padding: 0 1rem;
+  display: grid;
+  grid-template-columns: 1.7fr 1fr;
+  gap: 2rem;
+  flex: 1;
+}
+
+.section-title {
+  margin-bottom: 1.5rem;
+  border-left: 4px solid var(--primary);
+  padding-left: 12px;
+  font-size: 1.25rem;
+  color: var(--text-main);
+}
+
+/* --- CARROSSEL --- */
+.carousel {
+  position: relative;
+  overflow: hidden;
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-md);
+}
+
+.carousel input {
+  display: none;
+}
+
+.slides-wrapper {
+  display: flex;
+  width: 300%;
+  transition: transform 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.card--featured {
+  width: 33.333%;
+  aspect-ratio: 16/9;
+}
+
+#slide-1:checked ~ .slides-container .slides-wrapper {
+  transform: translateX(0);
+}
+#slide-2:checked ~ .slides-container .slides-wrapper {
+  transform: translateX(-33.333%);
+}
+#slide-3:checked ~ .slides-container .slides-wrapper {
+  transform: translateX(-66.666%);
+}
+
+.carousel-nav {
+  position: absolute;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 8px;
+  z-index: 10;
+}
+
+.nav-dot {
+  width: 10px;
+  height: 10px;
+  background: rgba(255, 255, 255, 0.4);
+  border-radius: 50%;
+  cursor: pointer;
+  transition: var(--transition);
+}
+
+#slide-1:checked ~ .carousel-nav label[for="slide-1"],
+#slide-2:checked ~ .carousel-nav label[for="slide-2"],
+#slide-3:checked ~ .carousel-nav label[for="slide-3"] {
+  background: var(--text-light);
+  width: 25px;
+  border-radius: 10px;
+}
+
+/* --- GRID DE NOTÍCIAS --- */
+.news-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1.25rem;
+}
+
+.card {
+  position: relative;
+  overflow: hidden;
+  border-radius: var(--radius-lg);
+  background: #1e293b;
+}
+
+.card--standard {
+  aspect-ratio: 1/1;
+}
+
+.card__image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 0.8;
+  transition: transform 0.5s ease;
+}
+
+.card__overlay {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  padding: 1.25rem;
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.9) 0%, transparent 70%);
+  color: white;
+}
+
+.card:hover .card__image {
+  transform: scale(1.05);
+  opacity: 1;
+}
+
+.card__headline {
+  font-size: 1.1rem;
+  line-height: 1.3;
+}
+.card__excerpt {
+  font-size: 0.85rem;
+  margin-top: 8px;
+  opacity: 0.9;
+}
+.card__title {
+  font-size: 0.95rem;
+  font-weight: 600;
+  line-height: 1.2;
+}
+
+.ticker-container {
+  width: 100%;
+  overflow: hidden; /* Essencial para o efeito */
+  background: var(--bg-glass);
+  border-top: 1px solid var(--border-color);
+  padding: 10px 0;
+}
+
+/* Flexbox que segura os grupos e executa a animação */
+.ticker-content {
+  display: flex;
+  width: max-content; /* Garante que a div tenha a largura total do conteúdo */
+  animation: ticker-move 10s linear infinite; /* 30s controla a velocidade */
+}
+
+/* Estilo dos itens */
+.ticker-item-group {
+  display: flex;
+  gap: 50px; /* Espaço entre as cotações */
+  padding-right: 50px; /* Espaço no final para emendar com o próximo grupo */
+}
+
+.ticker-item-group span {
+  white-space: nowrap;
+  font-size: 0.85rem;
+  color: var(--text-secondary);
+}
+
+.ticker-item-group small {
+  color: var(--accent);
+  font-weight: bold;
+  margin-left: 5px;
+}
+
+/* Animação: Move de 0% até -50% */
+/* Como temos dois grupos idênticos, ao chegar em -50%, o 
+   segundo grupo está na exata posição inicial do primeiro, 
+   criando o reset invisível. */
+@keyframes ticker-move {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+/* Pausa ao passar o mouse (opcional, mas amigável) */
+.ticker-container:hover .ticker-content {
+  animation-play-state: paused;
+}
+
+/* --- FOOTER --- */
+.footer {
+  padding: 3rem 1rem;
+  text-align: center;
+  background: var(--bg-glass);
+  margin-top: 4rem;
+  border-top: 1px solid var(--border-color);
+}
+
+/* --- RESPONSIVIDADE --- */
+@media (max-width: 1024px) {
+  .header .login {
+    position: static;
+    margin-bottom: 1rem;
+    order: -1;
+  }
+  .container {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 600px) {
+  .news-grid {
+    grid-template-columns: 1fr;
+  }
+  .logo {
+    font-size: 1.4rem;
+  }
+}

@@ -1,0 +1,190 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Jornal Economia</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+
+  <body>
+    <header class="header">
+      <div class="header-content">
+        <div class="logo-area">
+          <h1 class="logo">Jornal Economia</h1>
+        </div>
+
+        <nav class="ticker-container">
+          <div class="ticker-content">
+            <div class="ticker-item-group">
+              <span><b>IBOV</b> 128.450 <small>+1.1%</small></span>
+              <span><b>USD</b> R$ 5,24 <small>+0.5%</small></span>
+              <span><b>EUR</b> R$ 5,68 <small>-0.2%</small></span>
+              <span><b>BTC</b> R$ 345.200 <small>+2.4%</small></span>
+              <span><b>PETR4</b> R$ 38,50 <small>+0.8%</small></span>
+            </div>
+            <div class="ticker-item-group">
+              <span><b>IBOV</b> 128.450 <small>+1.1%</small></span>
+              <span><b>USD</b> R$ 5,24 <small>+0.5%</small></span>
+              <span><b>EUR</b> R$ 5,68 <small>-0.2%</small></span>
+              <span><b>BTC</b> R$ 345.200 <small>+2.4%</small></span>
+              <span><b>PETR4</b> R$ 38,50 <small>+0.8%</small></span>
+            </div>
+          </div>
+        </nav>
+      </div>
+
+      <button class="login">
+        <img src="UsuarioOff.png" alt="Usuario" />
+        Assine
+      </button>
+    </header>
+
+    <main class="container">
+      <section class="main-news">
+        <h2 class="section-title">Destaques da Semana</h2>
+
+        <div class="carousel">
+          <input type="radio" name="slider" id="slide-1" checked />
+          <input type="radio" name="slider" id="slide-2" />
+          <input type="radio" name="slider" id="slide-3" />
+
+          <div class="slides-container">
+            <div class="slides-wrapper">
+              <!-- NOTÍCIA 1 -->
+              <article class="card card--featured">
+                <img
+                  src="https://images.unsplash.com/photo-1559526324-593bc073d938?auto=format&fit=crop&w=800&q=80"
+                  alt="Mercado financeiro"
+                  class="card__image"
+                />
+                <div class="card__overlay">
+                  <div class="card__content">
+                    <h3 class="card__headline">
+                      Bolsa de Valores fecha em alta com avanço do setor
+                      bancário
+                    </h3>
+                    <p class="card__excerpt">
+                      Ações de grandes bancos impulsionam o mercado e aumentam a
+                      confiança dos investidores.
+                    </p>
+                  </div>
+                </div>
+              </article>
+
+              <!-- NOTÍCIA 2 -->
+              <article class="card card--featured">
+                <img
+                  src="https://images.unsplash.com/photo-1579621970795-87facc2f976d?auto=format&fit=crop&w=800&q=80"
+                  alt="Gráfico de inflação e economia"
+                  class="card__image"
+                />
+                <div class="card__overlay">
+                  <div class="card__content">
+                    <h3 class="card__headline">
+                      Inflação desacelera e surpreende analistas
+                    </h3>
+                    <p class="card__excerpt">
+                      Índices menores que o esperado podem impactar decisões
+                      sobre a taxa de juros.
+                    </p>
+                  </div>
+                </div>
+              </article>
+
+              <!-- NOTÍCIA 3 -->
+              <article class="card card--featured">
+                <img
+                  src="https://images.unsplash.com/photo-1579621970563-ebec7560ff3e?auto=format&fit=crop&w=800&q=80"
+                  alt="Investimentos"
+                  class="card__image"
+                />
+                <div class="card__overlay">
+                  <div class="card__content">
+                    <h3 class="card__headline">
+                      Investimentos digitais crescem entre jovens
+                    </h3>
+                    <p class="card__excerpt">
+                      Plataformas online facilitam o acesso ao mercado
+                      financeiro para novos investidores.
+                    </p>
+                  </div>
+                </div>
+              </article>
+            </div>
+          </div>
+
+          <div class="carousel-nav">
+            <label for="slide-1" class="nav-dot"></label>
+            <label for="slide-2" class="nav-dot"></label>
+            <label for="slide-3" class="nav-dot"></label>
+          </div>
+        </div>
+      </section>
+
+      <section class="other-news">
+        <h2 class="section-title">Últimas Notícias</h2>
+
+        <div class="news-grid">
+          <article class="card card--standard">
+            <a href="#" class="card__link">
+              <img
+                src="https://images.unsplash.com/photo-1554224155-6726b3ff858f?auto=format&fit=crop&w=400&q=80"
+                class="card__image"
+                alt="Empreendedorismo"
+              />
+              <div class="card__overlay">
+                <h3 class="card__title">Alta no Empreendedorismo</h3>
+              </div>
+            </a>
+          </article>
+
+          <article class="card card--standard">
+            <a href="#" class="card__link">
+              <img
+                src="https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?auto=format&fit=crop&w=400&q=80"
+                class="card__image"
+                alt="Planejamento financeiro"
+              />
+              <div class="card__overlay">
+                <h3 class="card__title">
+                  Planejamento Financeiro Ganha Força em 2026
+                </h3>
+              </div>
+            </a>
+          </article>
+
+          <article class="card card--standard">
+            <a href="#" class="card__link">
+              <img
+                src="https://images.unsplash.com/photo-1604594849809-dfedbc827105?auto=format&fit=crop&w=400&q=80"
+                class="card__image"
+                alt="Criptomoedas"
+              />
+              <div class="card__overlay">
+                <h3 class="card__title">Criptomoedas em Alta</h3>
+              </div>
+            </a>
+          </article>
+
+          <article class="card card--standard">
+            <a href="#" class="card__link">
+              <img
+                src="https://holdbrasil.com.br/wp-content/uploads/2023/11/imagem-website-site-1-2048x1311.png"
+                class="card__image"
+                alt="Planejamento financeiro"
+              />
+              <div class="card__overlay">
+                <h3 class="card__title">Educação Financeira nas Escolas</h3>
+              </div>
+            </a>
+          </article>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <p>Desenvolvido por <strong>Davi Robson Latini de Carvalho</strong></p>
+    </footer>
+  </body>
+</html>
