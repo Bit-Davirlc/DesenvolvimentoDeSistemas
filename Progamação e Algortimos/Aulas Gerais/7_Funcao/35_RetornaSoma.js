@@ -3,8 +3,6 @@
 const prompt = require("readline-sync");
 const alert = console.log;
 
-let i = 0;
-
 function somaDois(a, b){
     return a + b;
 } 
