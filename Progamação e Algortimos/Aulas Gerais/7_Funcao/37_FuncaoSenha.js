@@ -10,12 +10,12 @@ function login(usuario, senha) {
 
 while (true) {
   let usuario = prompt.question("Digite o usuario: ");
-  let senha = prompt.question("Digite a senha: ");
+  let senha = prompt.question("Digite a senha: ", { hideEchoBack: true });
 
   if (login(usuario, senha)) {
     alert("Login confirmado!");
     break;
   } else {
-    alert("Login negado!");
+    alert("Login negado!\nTente novamente.\n");
   }
 }
