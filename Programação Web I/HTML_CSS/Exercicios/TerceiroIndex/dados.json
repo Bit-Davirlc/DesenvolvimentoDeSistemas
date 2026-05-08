@@ -1,0 +1,14 @@
+[
+  {
+    "nome": "Davi",
+    "email": "davi@email.com",
+    "telefone": "(11) 99999-9999",
+    "plano": "Anual"
+  },
+  {
+    "nome": "Maria",
+    "email": "maria@email.com",
+    "telefone": "(21) 98888-7777",
+    "plano": "Mensal"
+  }
+]

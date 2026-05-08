@@ -82,6 +82,7 @@ nav p {
   color: var(--text-light);
   font-size: 0.9rem;
   font-weight: 600;
+  text-decoration: none;
   padding: 10px 20px;
   border: none;
   border-radius: 50px; /* Estilo pill */
@@ -268,6 +269,131 @@ nav p {
   color: var(--accent);
   font-weight: bold;
   margin-left: 5px;
+}
+
+/* --- PÁGINA DE FORMULÁRIO --- */
+
+.form-page {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 3rem 1rem;
+}
+
+.form-container {
+  width: 100%;
+  max-width: 520px;
+
+  background: var(--bg-glass);
+  backdrop-filter: blur(12px);
+
+  border: 1px solid var(--border-color);
+
+  border-radius: var(--radius-lg);
+
+  padding: 2rem;
+
+  box-shadow: var(--shadow-md);
+}
+
+.form-container h1 {
+  text-align: center;
+  margin-bottom: 2rem;
+
+  color: var(--primary);
+
+  font-size: 1.8rem;
+}
+
+.subscription-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+}
+
+.form-group label {
+  margin-bottom: 0.5rem;
+
+  font-size: 0.95rem;
+  font-weight: 600;
+
+  color: var(--text-main);
+}
+
+.form-group input,
+.form-group select {
+  padding: 0.9rem 1rem;
+
+  border: 1px solid var(--border-color);
+  border-radius: 10px;
+
+  background: rgba(255, 255, 255, 0.9);
+
+  font-size: 1rem;
+
+  transition: var(--transition);
+}
+
+.form-group input:focus,
+.form-group select:focus {
+  outline: none;
+
+  border-color: var(--primary);
+
+  box-shadow: 0 0 0 4px rgba(37, 99, 235, 0.15);
+}
+
+.submit-btn {
+  margin-top: 1rem;
+
+  background: var(--primary);
+  color: var(--text-light);
+
+  border: none;
+  border-radius: 50px;
+
+  padding: 1rem;
+
+  font-size: 1rem;
+  font-weight: 700;
+
+  cursor: pointer;
+
+  transition: var(--transition);
+
+  box-shadow: 0 4px 12px rgba(37, 99, 235, 0.2);
+}
+
+.submit-btn:hover {
+  background: #1d4ed8;
+
+  transform: translateY(-2px);
+}
+
+.back-link {
+  display: block;
+
+  margin-top: 1.5rem;
+
+  text-align: center;
+
+  color: var(--primary);
+
+  text-decoration: none;
+
+  font-weight: 600;
+
+  transition: var(--transition);
+}
+
+.back-link:hover {
+  opacity: 0.8;
 }
 
 /* Animação: Move de 0% até -50% */
