@@ -121,6 +121,25 @@ function deletarHamburguer() {
   renderizarLista();
 }
 
+function acaoDeletar(n) {
+
+  // Verifica se existe
+  if (n >= 0 && n < hamburgueria.length) {
+    //Armazena Temporariamente
+    const removido = hamburgueria[n]
+    
+    // Remove o item do array
+    hamburgueria.splice(n, 1);
+
+    alert(`\nHamburguer ${n + 1}. ${removido.nome} deletado com sucesso!`);
+  } else {
+    alert(`\nID invalido!`);
+  }
+
+  // Atualiza a interface
+  renderizarLista();
+}
+
 // Função principal de menu (modo terminal)
 function principal() {
   let select = 0;
@@ -189,6 +208,7 @@ function renderizarLista() {
         <th>ID</th>
         <th>Nome</th>
         <th>Preço</th>
+        <th>Ações</th>
       </tr>
     </thead>
     <tbody>
@@ -201,6 +221,7 @@ function renderizarLista() {
       <td>${i + 1}</td>
       <td>${hamburgueria[i].nome}</td>
       <td>R$ ${hamburgueria[i].preco}</td>
+      <td><button onclick="acaoDeletar(${i})">Del</button></td>
     </tr>
   `;
   }
